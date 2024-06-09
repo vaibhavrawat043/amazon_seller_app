@@ -1,0 +1,11 @@
+<form hx-post="{% url 'create_dispute' %}" hx-target="#dispute-list" hx-swap="innerHTML">
+    <label for="return_order_id">Return:</label>
+    <select name="return_order_id">
+        {% for return in returns %}
+        <option value="{{ return.id }}">{{ return.order.order_id }} - {{ return.return_reason }}</option>
+        {% endfor %}
+    </select>
+    <label for="dispute_reason">Dispute Reason:</label>
+    <textarea name="dispute_reason"></textarea>
+    <button type="submit">Create Dispute</button>
+</form>

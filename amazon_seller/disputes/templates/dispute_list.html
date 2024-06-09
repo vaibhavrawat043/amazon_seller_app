@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dispute Cases</title>
+    <script src="https://unpkg.com/htmx.org@1.6.1"></script>
+</head>
+<body>
+    <h1>Dispute Cases</h1>
+    <div id="dispute-list">
+        {% include 'partials/dispute_list.html' %}
+    </div>
+    <button hx-get="{% url 'create_dispute' %}" hx-target="#modal">Create New Dispute</button>
+    <div id="modal"></div>
+</body>
+</html>

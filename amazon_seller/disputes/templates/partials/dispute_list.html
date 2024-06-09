@@ -1,0 +1,18 @@
+<table>
+    <tr>
+        <th>Order ID</th>
+        <th>Return Reason</th>
+        <th>Dispute Reason</th>
+        <th>Status</th>
+        <th>Resolution</th>
+    </tr>
+    {% for dispute in disputes %}
+    <tr hx-swap-oob="true" id="dispute-{{ dispute.id }}">
+        <td>{{ dispute.return_order.order.order_id }}</td>
+        <td>{{ dispute.return_order.return_reason }}</td>
+        <td>{{ dispute.dispute_reason }}</td>
+        <td>{{ dispute.status }}</td>
+        <td>{{ dispute.resolution }}</td>
+    </tr>
+    {% endfor %}
+</table>

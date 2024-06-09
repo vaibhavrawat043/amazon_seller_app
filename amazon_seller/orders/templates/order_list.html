@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Orders</title>
+</head>
+<body>
+    <h1>Orders</h1>
+    <ul>
+        {% for order in orders %}
+            <li>{{ order.order_id }} - {{ order.item }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

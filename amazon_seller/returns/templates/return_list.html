@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Returns</title>
+</head>
+<body>
+    <h1>Returns</h1>
+    <ul>
+        {% for return in returns %}
+            <li>{{ return.order.order_id }} - {{ return.return_reason }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
